@@ -1,39 +1,90 @@
 <!DOCTYPE html>
-<html lang="PT-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="/style.css">
-  <title>Decodificador</title>
-</head>
-<body>
-  <header>
-    <img src="/imagens/logo.png" alt="Logo da Alura">
-  </header>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Decodificador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section>
+        <div class="principal">
+        <img src="imagens/logo.png" class="logo" onclick="home()" />
+        <h1 class="titulo">Criptografe e descripgrafe seus textos facilmente!</h1>
+        </div>
+        <div class="div-principal">
+          <form action="">
+            <textarea
+              class="text-input"
+              type="text"
+              name="input-texto"
+              maxlength="120"
+              id="input-texto"
+              placeholder="Digite seu texto"
+            ></textarea>
+            <div class="form-group">
+              <img src="imagens/!.png" class="img-alerta" width="30px"/>
+              <label for="input-texto"
+                >Apenas letras minúsculas e sem acento.</label
+              >
+            </div>
+        </div>
+          <div class="botoes-div">
+            <input
+              class="btn-criptografar"
+              type="submit"
+              value="Criptografar"
+              id="btn-criptografar"
+            />
+            <input
+              class="btn-descriptografar"
+              type="submit"
+              value="Descriptografar"
+              id="btn-descriptografar"
+            />
+          </div>
+        </form>
+      </section>
 
-  <main>
+      <section class="menssagem-box">
+        <div id="div-desaparece" class="menssagem-box-div">
+          <img src="imagens/busca.png" />
+          <h2>Nenhuma mensagem encontrada</h2>
+          <h3>
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </h3>
+        </div>
+        <div id="div-aparece">
+          <textarea
+            class="div-menssagem"
+            type="text"
+            id="mensagem"
+            placeholder="Nenhuma mensagem"
+          ></textarea>
+          <input
+            class="btn-copiar"
+            type="submit"
+            value="Copiar"
+            id="btn-copiar"
+          />
+        </div>
+      </section>
+    </main>
 
-    <section>
-      <textarea class="input-texto" cols="40" rows="6" placeholder="Digite o seu texto"></textarea>
-      <div>
-        <h6 class="informacao"> ATENÇÃO: Utilizar apenas letras minúsculas e sem acento.</h6>
-      </div>
-
-      <div class="botoes">
-        <button class="criptografar" onclick="btnCriptografar()">Criptografar</button>
-        <button class="descriptografar" onclick="btnDescriptografar()">Descriptografar</button>
-      </div>
-    </section>
-      
-    <section class="mensagem-box">
-      <textarea class="mensagem" cols="18" rows="8"></textarea>
-      <div id="div-aparece">
-        <button class="copiar" onclick=" copiar()">Copiar</button>
-      </div>
-    </section>    
-  </main>
-  </textarea>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
